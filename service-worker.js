@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Beam-Solver-v1.0/precache-manifest.542a1ba871065c763dfc64b449de4c07.js"
+  "/Beam-Solver-v1.0/precache-manifest.fd8eee1320e763398282bf2eabef83a2.js"
 );
 
 self.addEventListener('message', (event) => {
