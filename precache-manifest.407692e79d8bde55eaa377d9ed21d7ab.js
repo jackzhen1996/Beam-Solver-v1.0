@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43e3f95f2e46a9a65f655201d848fa21",
+    "revision": "67359c34b5e3c8c62a04939e55525e61",
     "url": "/Beam-Solver-v1.0/index.html"
   },
   {
-    "revision": "4f2e5a911a2bf8915300",
+    "revision": "3cf8e62575b60e9b0b17",
     "url": "/Beam-Solver-v1.0/static/css/main.c096829d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Beam-Solver-v1.0/static/js/2.c6f5b288.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f2e5a911a2bf8915300",
-    "url": "/Beam-Solver-v1.0/static/js/main.d50500ed.chunk.js"
+    "revision": "3cf8e62575b60e9b0b17",
+    "url": "/Beam-Solver-v1.0/static/js/main.8cf143f4.chunk.js"
   },
   {
     "revision": "fe2db4304262fd3326bb",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Beam-Solver-v1.0/static/css/main.c096829d.chunk.css",
-    "main.js": "/Beam-Solver-v1.0/static/js/main.d50500ed.chunk.js",
-    "main.js.map": "/Beam-Solver-v1.0/static/js/main.d50500ed.chunk.js.map",
+    "main.js": "/Beam-Solver-v1.0/static/js/main.8cf143f4.chunk.js",
+    "main.js.map": "/Beam-Solver-v1.0/static/js/main.8cf143f4.chunk.js.map",
     "runtime-main.js": "/Beam-Solver-v1.0/static/js/runtime-main.cfed3a56.js",
     "runtime-main.js.map": "/Beam-Solver-v1.0/static/js/runtime-main.cfed3a56.js.map",
     "static/js/2.c6f5b288.chunk.js": "/Beam-Solver-v1.0/static/js/2.c6f5b288.chunk.js",
     "static/js/2.c6f5b288.chunk.js.map": "/Beam-Solver-v1.0/static/js/2.c6f5b288.chunk.js.map",
     "index.html": "/Beam-Solver-v1.0/index.html",
-    "precache-manifest.b2db1b1aa21035ec2ceb8f2416344e51.js": "/Beam-Solver-v1.0/precache-manifest.b2db1b1aa21035ec2ceb8f2416344e51.js",
+    "precache-manifest.407692e79d8bde55eaa377d9ed21d7ab.js": "/Beam-Solver-v1.0/precache-manifest.407692e79d8bde55eaa377d9ed21d7ab.js",
     "service-worker.js": "/Beam-Solver-v1.0/service-worker.js",
     "static/css/main.c096829d.chunk.css.map": "/Beam-Solver-v1.0/static/css/main.c096829d.chunk.css.map",
     "static/js/2.c6f5b288.chunk.js.LICENSE.txt": "/Beam-Solver-v1.0/static/js/2.c6f5b288.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cfed3a56.js",
     "static/js/2.c6f5b288.chunk.js",
     "static/css/main.c096829d.chunk.css",
-    "static/js/main.d50500ed.chunk.js"
+    "static/js/main.8cf143f4.chunk.js"
   ]
 }
