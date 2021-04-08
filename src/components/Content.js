@@ -20,7 +20,7 @@ class Content extends Component {
         knowns: {force:[],moment:[],distributed:[]},
         unknowns: [],
         beam: 0,
-        unit: 'U.S', 
+        unit: 'U.S',
         solve: false,
         setupBeam:false,
         error: null
@@ -42,12 +42,12 @@ class Content extends Component {
             //console.log(element.edit)
             this.setState({unknowns:[...newArray2]})
         }
-        
-        
+
+
     }
 
     changeUnit(unit){
-        this.setState(()=> 
+        this.setState(()=>
             ({unit:unit})
         )
         console.log(this.state.unit)
@@ -57,14 +57,14 @@ class Content extends Component {
         let splitArray = element.type.split(' ')
         let type = splitArray[1].toLowerCase()
         let newElement = {...element,edit:!element.edit}
-        
+
         if(!element.isSupport) {                                                  //edit button logic for non supoort buttons
             let found= this.state.knowns[type].find(item=>item.id === element.id) //exclude the target item in state array
             let indexOfFound = this.state.knowns[type].indexOf(found)             //find item insert order
-            let newElement = {...element,edit:!element.edit}                      //reinsert the desired changed element into same index as the state array 
+            let newElement = {...element,edit:!element.edit}                      //reinsert the desired changed element into same index as the state array
             let newArray = [...this.state.knowns[type]].filter(item => item.id !== element.id)
-                newArray.splice(indexOfFound,0,newElement) 
-            this.setState({knowns:{...this.state.knowns, [type]:[...newArray]}})   //set state 
+                newArray.splice(indexOfFound,0,newElement)
+            this.setState({knowns:{...this.state.knowns, [type]:[...newArray]}})   //set state
         }
         else if (element.isSupport) {                                              //edit button logic for support buttons
             let found2= this.state.unknowns.find(item=>item.id === element.id)
@@ -85,7 +85,7 @@ class Content extends Component {
         //let type = splitArray[1].toLowerCase()
         //let target = this.state.knowns[type].find(item=>item.id === element.id)
         //console.log('element of ' + type + ' submitted a change:', target)
-    
+
 
     //handleEdit(element,event) {
     //    let splitArray = element.type.split(' ')
@@ -141,7 +141,7 @@ class Content extends Component {
                 }
                 return {beam:parseInt(length)}
             }
-           
+
         }
         )
         console.log("Content State", this.state)
@@ -212,7 +212,7 @@ class Content extends Component {
                 inverse = -1
             }
             return distr.magnitude*(distr.end - distr.start)*distance*inverse
-            
+
         })
 
         let reducer = (acc,curr) => acc+curr
@@ -265,7 +265,7 @@ class Content extends Component {
         //console.log(x)
 
         this.setState({solve:true,unknowns:[{...this.state.unknowns[0],magnitude:x[0][0].toFixed(1),direction:x[0][0]/Math.abs(x[0][0])},
-                    {...this.state.unknowns[1],magnitude:x[1][0].toFixed(1),direction:x[1][0]/Math.abs(x[1][0])}]}, 
+                    {...this.state.unknowns[1],magnitude:x[1][0].toFixed(1),direction:x[1][0]/Math.abs(x[1][0])}]},
                    ()=>console.log('Solved!', this.state.unknowns))
     }
 
@@ -288,7 +288,7 @@ class Content extends Component {
         }
     }
 
-    
+
     async resetData(){ //reset all state arrays to zero
        await this.setState(()=>initialState)
        console.log(this.state)
@@ -303,21 +303,19 @@ class Content extends Component {
 
         return (
             <div className = {classes.flexContainer}>
-                <ButtonGroup beamCheck = {this.state.beam} changeUnit = {this.changeUnit.bind(this)} solve = {this.getSolveSignal.bind(this)} reset = {this.resetData.bind(this)} getData = {this.getData.bind(this)}/>
-                <Canvas pass = {this.state} output = {this.state}/>
-                <div className = {classes.info} >
-                    <p><strong>About the Beam Solver v1.0</strong></p>
-                    <p>The current version of Beam Solver is only capable of solving statically determinate structures, meaning a single beam with only two supports.
-                        However there's no limit on the number of external loads acting on the structure. To solve structures with more than two unknowns, we will need
-                        more equations, and this feature, along with shear force and moment diagrams will be coming soon!
-                    </p>
-                    </div>
-                <div className = {classes.message}><h4>Message:</h4>
-                {this.state.beam === 0? <span>{noBeam}</span>: 
-                <span style = {this.state.error === 'Solved!'? {color: 'green'}: {color: 'red'}}> {this.state.error}</span> 
-                }
+                <div className={classes.left}>
+                    <ButtonGroup beamCheck = {this.state.beam} changeUnit = {this.changeUnit.bind(this)} solve = {this.getSolveSignal.bind(this)} reset = {this.resetData.bind(this)} getData = {this.getData.bind(this)}/>
                 </div>
-                <Table open = {this.setOpen.bind(this)} getData = {this.getChanges.bind(this)} delete = {this.deleteElement.bind(this)} pass = {this.state}></Table>
+                <div className={classes.middle}>
+                    <Canvas pass = {this.state} output = {this.state}/>
+                    <div className = {classes.message}><h4>Message:</h4>
+                        {this.state.beam === 0? <span>{noBeam}</span>:
+                            <span style = {this.state.error === 'Solved!'? {color: 'green'}: {color: 'red'}}> {this.state.error}</span>
+                        }
+                    </div>
+
+                    <Table open = {this.setOpen.bind(this)} getData = {this.getChanges.bind(this)} delete = {this.deleteElement.bind(this)} pass = {this.state}></Table>
+                </div>
             </div>
         )
     }

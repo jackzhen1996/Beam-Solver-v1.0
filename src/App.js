@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Content from './components/Content'
-
+import classes from './App.css';
 
 function App(){
   const title ={
@@ -25,15 +25,15 @@ const footer = {
     paddingTop: '10px',
     zIndex: '1',
 }
- 
+
     return (
-      <div className="App">
+      <div className='App'>
         <div style = {title}>
           <h1>Beam Solver v1.0</h1>
         </div>
         <Content/>
         <div style = {footer}>
-          <footer><h3>Made by Jack Zhen, Civil Engineer, SJSU 2020</h3></footer> 
+          <footer><h3>Made by Jack Zhen, Civil Engineer, SJSU 2020</h3></footer>
           <footer><h3>Check me out at:</h3></footer>
           <footer><h3><a href = 'https://www.linkedin.com/in/jackzhen/'>Linkedin</a></h3></footer>
         </div>

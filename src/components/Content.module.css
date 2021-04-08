@@ -1,13 +1,28 @@
 .flexContainer {
-    display: grid;
-    /*width: 900px;*/
-    /*flex-wrap: wrap;*/
-    grid-template-columns: 300px 1100px auto;
-    grid-template-rows: auto 100px auto;
-    gap: 30px 40px;
-    justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
     align-content: center;
 }
+
+.left {
+    flex: 1;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
+    flex: 3;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 
 .info {
     box-shadow: 3px 3px 4px 4px #adb5bd;
@@ -17,60 +32,42 @@
     margin-top: 50px;
     padding: 30px;
     text-align: left;
-    align-self: start;  
-    
+    align-self: start;
+
 }
 
 .buttonGroup {
+    margin-top: 13%;
     box-shadow: 3px 3px 4px 4px #adb5bd;
     background: #ffffff;
-    width: 200px;
-    margin: 50px;
+    width: 60%;
+    height: 70%;
     padding-top: 25px;
     padding-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
-    grid-row-start: 1;
-    grid-row-end:5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    align-self: start;
 }
 
 .message {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end:3;
     box-shadow: 3px 3px 4px 4px #adb5bd;
     background:#ffffff;
-    width: 940px;
+    width: 80%;
     height: 40px;
     padding:30px;
     text-align: left;
-    align-self: start;
-    justify-self: center;
-
 }
 
 .Table {
-    grid-row-start: 3;
-    grid-row-end:4;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    margin-top: 2%;
     box-shadow: 3px 3px 4px 4px #adb5bd;
-    width: 940px;
+    width: 80%;
     background:#ffffff;
     padding: 50px 30px 30px 30px;
-    justify-self: center;
-    align-self: center;
 
 }
 
 .Canvas {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    
+    width: 85%;
 }
 
 button {
@@ -93,7 +90,7 @@ button:hover {
     background-color: #ced4da;
     cursor: pointer;
     color: black;
-    
+
 }
 
 span {
