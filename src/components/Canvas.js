@@ -2,10 +2,6 @@ import React from 'react';
 import classes from './Content.module.css'
 import { Stage, Layer, Text, Arrow, Line, Rect, Circle } from 'react-konva';
 import Wrap from './Wrap'
-import Animate from './Animate.js'
-
-
-
 
 function Canvas(props) {
     const useStyle = {
