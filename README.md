@@ -1,4 +1,5 @@
 ## Beam Solver v1.0
+
 ![alt text](./main.png)
 
 Deployed Link: http://ec2-52-53-187-29.us-west-1.compute.amazonaws.com:3000/
