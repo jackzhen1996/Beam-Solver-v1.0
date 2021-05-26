@@ -1,4 +1,4 @@
-## Beam Solver v1.0
+# Beam Solver v1.0
 
 ![alt text](./main.png)
 
